@@ -1,1 +1,2 @@
-Sungrow Invert to share operational state with mqtt. data query performed by websocket
+SML Reader and distributes measurement values to mqtt
+read from serial interface
