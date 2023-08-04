@@ -1,0 +1,18 @@
+#Contents of /etc/systemd/system/sml2mqtt.service
+#systemctl daemon-reload
+#systemctl enable sml2mqtt.service
+#systemctl start sml2mqtt.service
+
+[Unit]
+Description= Smartmeter 2 mqtt publisher
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/opt/sml2mqtt/sml2mqtt.py /opt/sml2mqtt/sml2mqtt.config
+Restart=on-failure
+RestartSec=5s
+
+
+[Install]
+WantedBy=multi-user.target
